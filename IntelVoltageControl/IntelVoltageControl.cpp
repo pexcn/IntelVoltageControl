@@ -101,8 +101,8 @@ void PrintUsage()
     puts("    - 0 = CPU core");
     puts("    - 1 = iGPU core/slice");
     puts("    - 2 = CPU cache");
-    puts("    - 3 = System agent");
-    puts("    - 4 = iGPU uncore/unslice");
+    puts("    - 3 = iGPU uncore/unslice");
+    puts("    - 4 = System agent");
     puts("  Example to set voltage offset for both CPU core and iGPU core:");
     puts("    IntelVoltageControl set --commit 0 -100 1 -50");
 }

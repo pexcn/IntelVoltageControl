@@ -49,8 +49,8 @@ The FIVR in the Intel CPU regulates voltages for many SoC components. These volt
 - 2  
   CPU caches.
 - 3  
-  Skylake system agent, which includes I/O bus and display engine.
-- 4  
   Integrated GPU unslice. Contains non-compute GPU parts such as QuickSync, video decoder, and other fixed function hardware.
+- 4  
+  Skylake system agent, which includes I/O bus and display engine.
 
 Note that for at least Skylake and its derivatives (Kaby Lake, Coffee Lake, Comet Lake, and so on), plane 0 and 2 are tied. Therefore to set the voltage offset for the CPU core (plane 0), plane 2 (CPU cache) has to be set to the same voltage offset as well, otherwise the set voltage offset will not take any effect.
