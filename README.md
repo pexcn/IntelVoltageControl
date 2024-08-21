@@ -38,6 +38,20 @@ Put the `WinRing0x64.dll` and `WinRing0x64.sys` (included in the release section
 - To reset iGPU unslice voltage offset and keep other offsets intact:  
   `IntelVoltageControl set --commit 4 0`
 
+### Task Scheduler
+
+```bat
+:: 1. Get release and put it into `C:\Program Files\IntelVoltageControl`
+
+:: 2. Download task scheduler xml
+curl -LO https://github.com/pexcn/IntelVoltageControl/raw/main/extras/IntelVoltageControl.xml
+
+:: 3. Import task scheduler from xml
+schtasks /create /tn "IntelVoltageControl" /xml ./IntelVoltageControl.xml
+
+:: 4. Run `taskschd.msc` and check `IntelVoltageControl` task
+```
+
 ## Control Plane
 
 The FIVR in the Intel CPU regulates voltages for many SoC components. These voltages can be controlled separately by selecting the correct control plane number. A known control plane numbers for Skylake Y/U/H/S are:
